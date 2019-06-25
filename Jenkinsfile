@@ -1,6 +1,6 @@
 pipeline {
   tools {
-    nodejs 'default-nodejs'
+    nodejs 'Nodejs'
   }
   stages {
     stage('Startup') {

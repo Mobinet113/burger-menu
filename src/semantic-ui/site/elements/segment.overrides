@@ -1,0 +1,9 @@
+/*******************************
+            Theme
+*******************************/
+
+.ui.segment {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}

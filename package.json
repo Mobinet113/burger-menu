@@ -1,7 +1,7 @@
 {
-  "name": "bira",
+  "name": "burger-menu",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@types/jest": "24.0.14",
     "@types/node": "12.0.8",
@@ -10,13 +10,14 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "semantic-ui-react": "^0.87.2",
     "typescript": "3.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +32,27 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.2.3",
+    "@types/chai": "^4.1.7",
+    "@types/enzyme": "^3.9.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "chai": "^4.2.0",
+    "craco-less": "^1.9.0",
+    "dotenv": "^8.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "semantic-ui-less": "^2.4.1",
+    "sinon": "^7.3.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/index.tsx",
+      "!src/index.ts"
     ]
   }
 }

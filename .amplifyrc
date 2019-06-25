@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "bira-20190618153036-authRole",
+            "UnauthRoleArn": "arn:aws:iam::654772728985:role/bira-20190618153036-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::654772728985:role/bira-20190618153036-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "bira-20190618153036-deployment",
+            "UnauthRoleName": "bira-20190618153036-unauthRole",
+            "StackName": "bira-20190618153036",
+            "StackId": "arn:aws:cloudformation:eu-west-1:654772728985:stack/bira-20190618153036/a37842e0-91d5-11e9-841f-02f49d781af6"
+        }
+    }
+}

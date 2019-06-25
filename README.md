@@ -1,8 +1,10 @@
-# ![Burger Menu](https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png)
+<img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png" alt="Burger Menu" width="200"/>
 
-A fun little sandwich builder.
+# A fun little sandwich builder.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/screenshot.png" alt="screenshot" width="200"/>
 
 ## Available Scripts
 

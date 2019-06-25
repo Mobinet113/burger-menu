@@ -1,7 +1,10 @@
 pipeline {
+  agent any
+
   tools {
     nodejs 'Nodejs'
   }
+
   stages {
     stage('Startup') {
       steps {

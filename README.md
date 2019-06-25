@@ -1,8 +1,8 @@
+[![Build Status](https://jenkins.broffe.com/job/Burger%20Menu/7/badge/icon)](https://jenkins.broffe.com/job/Burger%20Menu/7/)
+
 <img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png" alt="Burger Menu" width="200"/>
 
 # A fun little sandwich builder.
-
-[![Build Status](https://jenkins.broffe.com/job/Burger%20Menu/7/badge/icon)](https://jenkins.broffe.com/job/Burger%20Menu/7/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [TypeScript](https://www.typescriptlang.org/).
 

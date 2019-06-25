@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "homepage": "https://github.com/Mobinet113/burger-menu",
-  "license": "MIT License",
+  "license": "MIT",
   "dependencies": {
     "@types/jest": "24.0.14",
     "@types/node": "12.0.8",
@@ -18,8 +18,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
-    "test-ci": "craco test --ci --watchAll",
+    "test":  "craco test --coverage --coverageDirectory=jest/coverage",
+    "test-ci":  "craco test --coverage --coverageDirectory=jest/coverage --ci",
     "eject": "craco eject"
   },
   "eslintConfig": {
@@ -56,6 +56,10 @@
       "!src/index.js",
       "!src/index.tsx",
       "!src/index.ts"
+    ],
+    "coverageReporters": [
+      "text",
+      "cobertura"
     ]
   }
 }

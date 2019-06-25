@@ -1,4 +1,4 @@
-# Burger Menu
+# ![Burger Menu](https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png)
 
 A fun little sandwich builder.
 

@@ -19,7 +19,7 @@
     "start": "craco start",
     "build": "craco build",
     "test":  "craco test --coverage --coverageDirectory=jest/coverage",
-    "test-ci":  "craco test --coverage --coverageDirectory=jest/coverage --ci",
+    "test-ci":  "craco test --coverage --coverageDirectory=jest/coverage --ci --watchAll --forceExit",
     "eject": "craco eject"
   },
   "eslintConfig": {

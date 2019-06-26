@@ -10,27 +10,29 @@ configure({adapter: new Adapter()});
 
 describe('Home screen testing', function () {
 
-  const wrapper = mount(<Home />);
+  const wrapper = mount(<Home/>);
   const home = wrapper.find('#screen-home');
-  let testIngredient = 2;
 
   it('renders the component', function () {
     expect(home.length).to.equal(1);
   });
 
-  it('handles ingredients clicks', function() {
-    wrapper.instance().onIngredientClick( {id: testIngredient, name: ingredients[testIngredient]} );
+  it('handles all ingredients clicks', function () {
 
-    expect(wrapper.state().ingredients).to.contain(testIngredient)
+    for (let i = 0; i < ingredients.length; i++) {
+      wrapper.instance().onIngredientClick({id: i, name: ingredients[i]});
+      expect(wrapper.state().ingredients).to.contain(i)
+    }
+
   });
 
-  it('handles reset click', function() {
+  it('handles reset click', function () {
     wrapper.instance().onResetClick();
 
     expect(wrapper.state().ingredients).to.be.empty;
   });
 
-  it('renders all ingredients', function() {
+  it('renders all ingredients', function () {
     expect(wrapper.find(Ingredient).length).to.equal(ingredients.length)
   });
 

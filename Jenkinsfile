@@ -29,13 +29,26 @@ pipeline {
         }
       }
     }
-    stage('Build') {
-      steps {
-        script {
-          sh 'npm run build'
+    stage('Test and Build') {
+      parallel {
+        stage('Run Tests') {
+          steps {
+            sh 'npm run test'
+          }
+        }
+        post {
+            always {
+              step([$class: 'CoberturaPublisher', coberturaReportFile: 'jest/coverage/cobertura-coverage.xml'])
+            }
+        }
+        stage('Create Build Artifacts') {
+          steps {
+            sh 'npm run build'
+          }
         }
       }
-    }
+}
+
   }
 }
 

@@ -10,35 +10,24 @@ pipeline {
   }
 
   stages {
-    stage('Startup') {
+    stage('Install') {
       steps {
         script {
           sh 'npm install'
         }
       }
     }
-    stage('Test') {
-      steps {
-        script {
-          sh 'npm run test -- --ci --coverageDirectory=jest/coverage'
-        }
-      }
-      post {
-        always {
-          step([$class: 'CoberturaPublisher', coberturaReportFile: 'jest/coverage/cobertura-coverage.xml'])
-        }
-      }
-    }
+
     stage('Test and Build') {
       parallel {
         stage('Run Tests') {
           steps {
             sh 'npm run test'
           }
-        }
-        post {
-            always {
-              step([$class: 'CoberturaPublisher', coberturaReportFile: 'jest/coverage/cobertura-coverage.xml'])
+          post {
+                always {
+                  step([$class: 'CoberturaPublisher', coberturaReportFile: 'jest/coverage/cobertura-coverage.xml'])
+                }
             }
         }
         stage('Create Build Artifacts') {
@@ -47,8 +36,17 @@ pipeline {
           }
         }
       }
-}
-
+    }
+    stage('Deploy'){
+        steps{
+            script{
+                withAWS(region:'eu-west-2',credentials:'AWS') {
+                    s3Delete(bucket: 'burger-menu.broffe.com', path:'**/*')
+                    s3Upload(bucket: 'burger-menu.broffe.com', workingDir:'build', includePathPattern:'**/*');
+                }
+            }
+        }
+    }
   }
 }
 

@@ -1,4 +1,7 @@
-[![Build Status](https://jenkins.broffe.com/job/Burger%20Menu/7/badge/icon)](https://jenkins.broffe.com/job/Burger%20Menu/7/)
+
+[![Build Status](https://jenkins.broffe.com/buildStatus/icon?job=Burger+Menu)](https://jenkins.broffe.com/job/Burger%20Menu/)
+
+<br />
 
 <img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png" alt="Burger Menu" width="200"/>
 

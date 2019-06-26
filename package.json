@@ -16,11 +16,11 @@
     "typescript": "3.5.2"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test":  "craco test --coverage --coverageDirectory=jest/coverage",
-    "test-ci":  "craco test --coverage --coverageDirectory=jest/coverage --ci --watchAll --forceExit",
-    "eject": "craco eject"
+    "start":   "craco start",
+    "build":   "craco build",
+    "test":    "craco test --coverage --coverageDirectory=jest/coverage",
+    "test-ci": "craco test",
+    "eject":   "craco eject"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -5,6 +5,10 @@ pipeline {
     nodejs 'Nodejs'
   }
 
+  environment {
+    CI = 'true'
+  }
+
   stages {
     stage('Startup') {
       steps {
@@ -16,7 +20,7 @@ pipeline {
     stage('Test') {
       steps {
         script {
-          sh 'npm run test-ci'
+          sh 'npm run test-ci -- --ci'
         }
       }
       post {
@@ -28,8 +32,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          sh 'npm start'
-          sh 'npm pack'
+          sh 'npm run build'
         }
       }
     }

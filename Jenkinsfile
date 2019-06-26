@@ -20,7 +20,7 @@ pipeline {
     stage('Test') {
       steps {
         script {
-          sh 'npm run test-ci -- --ci'
+          sh 'npm run test -- --ci --coverageDirectory=jest/coverage'
         }
       }
       post {

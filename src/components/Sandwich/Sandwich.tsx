@@ -6,7 +6,6 @@ import Reset from '../Reset/Reset';
 
 export interface SandwichProps {
   ingredients: Array<number>,
-
   onReset?(): void
 }
 
@@ -14,8 +13,6 @@ export interface SandwichState {
   loading: boolean
 }
 
-// 'SandwichProps' describes the shape of props.
-// State is never set so we use the '{}' type.
 class Sandwich extends React.Component<SandwichProps, SandwichState> {
 
   constructor(props: SandwichProps) {
@@ -64,7 +61,7 @@ class Sandwich extends React.Component<SandwichProps, SandwichState> {
 }
 
 
-const styles = {
+export const styles = {
   container: {
     minHeight: "100%",
     position: "relative",

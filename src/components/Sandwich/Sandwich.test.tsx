@@ -1,40 +1,41 @@
 import React from 'react';
-import {configure, shallow} from 'enzyme';
+import {configure, shallow, mount} from 'enzyme';
 import {expect} from 'chai';
 import Sandwich from './Sandwich';
 import Adapter from 'enzyme-adapter-react-16'
 
 configure({adapter: new Adapter()});
 
-let sandwich: Array<number> | null = [0, 2, 3, 0];
+let sandwich: Array<number> = [0, 2, 3, 0];
 
 const handleOnReset = () => {
-  sandwich = null;
+  sandwich = [];
 };
 
 const tests = (wrapper: any) => {
-  it('renders the component', function () {
-    expect(wrapper.find('.sandwich').length).to.equal(1);
-  });
+
+  it('renders the sandwich slices', function () {
+    expect(wrapper.find('.slice').length).to.equal(sandwich.length);
+  })
 
   it('resets the sandwich', function () {
     wrapper.instance().onReset();
-    expect(sandwich).to.equal(null);
-  })
-}
+    expect(sandwich).to.be.empty;
+  });
+
+  it('updates after the sandwich is reset', (done) => {
+    setTimeout(() => {
+      done();
+    }, 500);
+  });
+};
 
 describe('Sandwich component testing', function () {
-
-  const wrapper = shallow(<Sandwich ingredients={sandwich} onReset={handleOnReset}/>);
-
+  const wrapper = mount(<Sandwich ingredients={sandwich} onReset={handleOnReset}/>);
   tests(wrapper);
-
 });
 
 describe('Sandwich component testing with no onReset prop', function () {
-
   const wrapper = shallow(<Sandwich ingredients={sandwich}/>);
-
   tests(wrapper);
-
 });

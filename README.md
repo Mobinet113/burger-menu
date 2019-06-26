@@ -1,18 +1,11 @@
-
+# Burger Menu
 [![Build Status](https://jenkins.broffe.com/buildStatus/icon?job=Burger+Menu)](https://jenkins.broffe.com/job/Burger%20Menu/)
 
-<br />
-
-<img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/burger-menu.png" alt="Burger Menu" width="200"/>
-
-# A fun little sandwich builder.
+A fun little sandwich builder.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [TypeScript](https://www.typescriptlang.org/).
 
 <img src="https://raw.githubusercontent.com/Mobinet113/burger-menu/master/public/media/screenshot.png" alt="screenshot"/>
-
-<br />
-<br />
 
 Images and logo by [Jack Jones](https://github.com/jackjonesart)
 

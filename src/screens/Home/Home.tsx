@@ -8,8 +8,6 @@ export interface HomeState {
   ingredients: Array<number>
 }
 
-// 'HomeProps' describes the shape of props.
-// State is never set so we use the '{}' type.
 class Home extends React.Component<{}, HomeState> {
 
   constructor(props: any) {
@@ -48,7 +46,7 @@ class Home extends React.Component<{}, HomeState> {
                   image={ingredient.image}
                   id={index}
                   key={index}
-                  onClick={evt => this.onIngredientClick(evt)}
+                  onClick={this.onIngredientClick}
                   color={ingredient.color}/>
               )}
             </Grid>

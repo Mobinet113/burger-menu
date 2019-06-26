@@ -18,8 +18,7 @@
   "scripts": {
     "start":   "craco start",
     "build":   "craco build",
-    "test":    "craco test --coverage --coverageDirectory=jest/coverage",
-    "test-ci": "craco test",
+    "test":    "craco test",
     "eject":   "craco eject"
   },
   "eslintConfig": {
@@ -53,12 +52,13 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/index.js",
       "!src/index.tsx",
-      "!src/index.ts"
+      "!src/serviceWorker.ts"
     ],
     "coverageReporters": [
       "text",
+      "json",
+      "lcov",
       "cobertura"
     ]
   }

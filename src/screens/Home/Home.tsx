@@ -3,6 +3,7 @@ import ingredients from "../../lib/ingredients";
 import Ingredient from "../../components/Ingredient/Ingredient";
 import Sandwich from "../../components/Sandwich/Sandwich";
 import {Grid, Image} from 'semantic-ui-react';
+import Price from "../../components/Price/Price";
 
 export interface HomeState {
   ingredients: Array<number>
@@ -47,13 +48,16 @@ class Home extends React.Component<{}, HomeState> {
                   id={index}
                   key={index}
                   onClick={this.onIngredientClick}
-                  color={ingredient.color}/>
+                  color={ingredient.color} />
               )}
             </Grid>
           </Grid.Column>
 
           <Grid.Column mobile={16} tablet={3} computer={6}>
             <Sandwich ingredients={this.state.ingredients} onReset={this.onResetClick}/>
+            
+            
+            <Price ingredients={this.state.ingredients}/>
           </Grid.Column>
 
         </Grid>
